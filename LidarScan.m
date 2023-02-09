@@ -21,7 +21,7 @@ function [rangescan] = LidarScan(lidar)
         j = j+1;
     end
 
-    rangescan = zeros(1081,1);
+    rangescan = zeros(1,1081);
     for k = 1:size(encodeddist,1)
         rangescan(k) = decodeSCIP(encodeddist(k,:));
     end
